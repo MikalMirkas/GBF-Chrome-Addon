@@ -1,38 +1,29 @@
 var cl = function(ev){
-  var re = /ID：(\w+)/;
-  var ree = /ID: (\w+)/;
+  var jpid = /ID：([A-z0-9]{8})/;
+  var enid = /ID: ([A-z0-9]{8})/;
+  var valid = false;
   if(ev.target.nodeName.toLowerCase() == "p" && ev.target.classList.contains('tweet-text')) {
     for(var i in ev.target.childNodes) {
       var cnode = ev.target.childNodes[i];
       var text = cnode.textContent;
-	  //en
-      if(match = ree.exec(cnode.textContent)) {
-        var pos = ree.exec(text).index;
+      if(match = enid.exec(cnode.textContent)) {//English Handler
+		valid = true;
+		var pos = enid.exec(text).index;
         var messageTitle = text.substring(text.lastIndexOf("Lv")).trim();
 		var st = pos+4;
         var ed = st+9;
         var range = document.createRange();
-        range.setStart(cnode,st);
-        range.setEnd(cnode,ed);
-        var selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-        chrome.runtime.sendMessage({data: "data"});
-
-        var success = document.execCommand('copy');  
-        chrome.runtime.sendMessage({title: messageTitle, message: "ID: " + range.toString()}, function(){});
-        ev.stopPropagation();
-        ev.preventDefault();
-        return false;
       }
-	  //jp
-      if(match = re.exec(cnode.textContent)) {
-        var pos = re.exec(text).index;
+      if(match = jpid.exec(cnode.textContent)) {//Japanese Handler
+		valid = true;
+        var pos = jpid.exec(text).index;
         var messageTitle = text.substring(text.lastIndexOf("Lv")).trim();
 		var st = pos+3;
         var ed = st+8;
         var range = document.createRange();
-        range.setStart(cnode,st);
+      }
+		if(valid = true) {
+		range.setStart(cnode,st);
         range.setEnd(cnode,ed);
         var selection = window.getSelection();
         selection.removeAllRanges();
@@ -44,7 +35,7 @@ var cl = function(ev){
         ev.stopPropagation();
         ev.preventDefault();
         return false;
-      }
+		}
     }
   }
 }
