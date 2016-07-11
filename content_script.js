@@ -1,3 +1,5 @@
+//depricated file
+
 var node = document.querySelector('.column-type-search p.js-tweet-text');
 var re = /ID：(\w+)/;
 
