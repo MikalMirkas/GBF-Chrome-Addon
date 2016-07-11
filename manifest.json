@@ -27,6 +27,7 @@
   "permissions": [
     "activeTab",
     "https://tweetdeck.twitter.com/",
+    "contextMenus"
     "clipboardRead",
     "clipboardWrite",
     "notifications"
