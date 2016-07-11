@@ -1,0 +1,6 @@
+{
+  "name": "Gbf-tweetdeck-addon",
+  "tagline": "A utility tool for Granblue Fantasy.",
+  "body": "# GBF-Tweetdeck-Addon\r\nA utility tool for Granblue Fantasy.\r\n\r\nThis started as a fix for [@iteratorP](https://twitter.com/iteratorP)'s [plugin](https://chrome.google.com/webstore/detail/granblue-tweetdeck-copier/ggjpfidpfbnjjdecmffaldmhkfjoccnl), and I figured that since I spend so much time playing this game - I might as well do it more efficiently.\r\n\r\nFeatures:\r\n\r\n+Supports EN and JP Tweets, directly from Tweetdeck.\r\n\r\n  +Will not copy any raid ID that the game couldn't generate under natural conditions.\r\n  \r\nPotentially planned features:\r\n\r\n+actually learning how to js\r\n\r\n+options for copying IDs\r\n\r\n+joining raids through the context menu/potential viramate raid id injection***\r\n\r\nExternal Downloads:\r\n\r\n[Google Apps](https://chrome.google.com/webstore/detail/gbf-utility-plugin/chdpeoidmkbbmcbandlmolnemjbbbkji)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
