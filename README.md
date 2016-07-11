@@ -13,5 +13,7 @@ Planned features:
 +options for copying IDs
 +joining raids through the context menu/potential viramate raid id injection***
 
+External Downloads:
+[Google Apps](https://chrome.google.com/webstore/detail/gbf-utility-plugin/chdpeoidmkbbmcbandlmolnemjbbbkji)
 
 ***may or may not be possible with my current JS skill.
